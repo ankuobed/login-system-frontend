@@ -1,0 +1,215 @@
+body {
+  font-family: montserrat;
+  margin: 0;
+  background-color: #f3f3f3;
+}
+
+@font-face {
+  font-family: Adine;
+  src: url('./fonts/Adine\ Kirnberg.ttf');
+}
+
+@font-face {
+  font-family: precious;
+  src: url('./fonts/Precious.ttf')
+}
+
+.container {
+  margin: 0 15%;
+}
+
+.link {
+  text-decoration: none;
+  color: inherit;
+}
+
+.headerCon {
+  width: 100%;
+  background-color: white;
+  box-shadow: 1px 1px 20px lightgray;
+}
+
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  color: #355070;
+  height: 60px;
+  padding: 0 10px;
+}
+
+.header h2 {
+  font-family: adine;
+  letter-spacing: 3px;
+  font-size: 40px;
+}
+
+.header button {
+  color: white;
+  background-color: #355070;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 6px;
+  font-size: 15px;
+  font-family: montserrat;
+  font-weight: bold;
+  outline: none;
+}
+
+.home {
+  display: flex;
+  justify-content: center;
+}
+
+
+
+form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 400px;
+  padding: 10px;
+  background-color: white;
+  margin-top: 40px;
+  padding: 0 25px 20px 25px;
+  border-radius: 10px;
+}
+
+form p {
+  text-align: center;
+}
+
+form h2 {
+  color: #355070;
+  text-align: left;
+  width: 100%;
+}
+
+form h2 span {
+  font-family: adine;
+  font-size: 35px;
+  letter-spacing: 2px;
+}
+
+.inputCon {
+  display: flex;
+  align-items: center;
+  margin: 10px 0;
+  padding: 7px;
+  background-color: rgb(235, 235, 235);
+  border-radius: 5px;
+  width: 100%;
+}
+
+.inputCon .MuiSvgIcon-root {
+  color: gray;
+}
+
+input {
+  border: none;
+  font-size: 16px;
+  padding: 5px;
+  background-color: transparent;
+  flex: 1;
+  outline: none;
+}
+
+.MuiInput-root {
+  background-color: #ebebeb;
+  margin-bottom: 10px;
+  padding: 3px 10px;
+  border-radius: 2px;
+}
+
+.remember {
+  display: flex;
+  align-items: center;
+  margin-top: 10px;
+  font-size: 15px;
+  width: 100%;
+}
+
+.remember .MuiCheckbox-root {
+  color: #355070;
+}
+
+.MuiSwitch-root {
+  color: red;
+}
+
+form button {
+  color: white;
+  background-color: #355070;
+  border: none;
+  padding: 10px;
+  border-radius: 40px;
+  font-size: 15px;
+  margin-top: 15px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: montserrat;
+  font-weight: bold;
+  outline: none;
+  width: 200px;
+}
+
+button > .MuiCircularProgress-root {
+  margin-left: 10px;
+}
+
+.error {
+  color: orangered;
+  border: 2px solid #ff946e;
+  padding: 5px;
+  border-radius: 3px;
+  background-color: #fff2ee;
+  margin: 5px 0;
+  display: flex;
+  align-items: center;
+  font-size: 14px;
+  width: 100%;
+}
+
+.success {
+  color: green;
+  border: 2px solid lime;
+  padding: 5px;
+  border-radius: 3px;
+  background-color: rgb(226, 255, 226);
+  margin: 5px 0;
+  display: flex;
+  align-items: center;
+  font-size: 14px;
+}
+
+.error > .MuiSvgIcon-root, .success > .MuiSvgIcon-root {
+  font-size: 16px;
+  margin-right: 3px;
+}
+
+.username {
+  width: 30%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.username > .MuiSvgIcon-root {
+  margin-right: 2px;
+}
+
+@media(max-width: 500px) {
+  form {
+    width: 80%;
+    padding: 0;
+  }
+
+  .container {
+    margin: 0 1%;
+  }
+
+  body {
+    background-color: white;
+  }
+}
