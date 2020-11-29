@@ -2,12 +2,12 @@ import React, { useState, useEffect } from 'react'
 import axios from 'axios'
 import { Error, PersonOutline, LockOutlined } from '@material-ui/icons'
 import { CircularProgress, Checkbox } from '@material-ui/core'
-import { useStateValue } from '../StateContext'
+import { useUser } from '../UserContext'
 import { useHistory } from 'react-router-dom'
 import { getCookie } from '../utils'
 
 const LoginForm = () => {
-    const [, setUser] = useStateValue();
+    const [, setUser] = useUser()
 
     const [username, setUsername] = useState('');
     const [password, setPassword] = useState('');
@@ -53,9 +53,13 @@ const LoginForm = () => {
             }
             history.push('/user')
         })
-        .catch(err => {
+        .catch(({response}) => {
             setLoading(false);
-            setError(err.response.data);
+            if(!response) {
+                setError('newtwork too slow or unavailable')
+            } else {
+                setError(response.data)
+            }
         })
     }
 

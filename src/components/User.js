@@ -1,10 +1,10 @@
 import React, { useEffect } from 'react'
 import { useHistory } from 'react-router-dom'
-import { useStateValue } from '../StateContext'
+import { useUser } from '../UserContext'
 import { getCookie } from '../utils'
 
 export default function User() {
-    const [user] = useStateValue()
+    const [user] = useUser()
     const history = useHistory()
 
     useEffect(() => {

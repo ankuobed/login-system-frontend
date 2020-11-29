@@ -1,11 +1,11 @@
 import React, { useEffect } from 'react'
 import '../App.css'
-import { useStateValue } from '../StateContext'
+import { useUser } from '../UserContext'
 import { useHistory, Link } from 'react-router-dom'
 import { getCookie } from '../utils'
 
 function Header({ login, userHeader }) {  
-    const [user, setUser] = useStateValue()
+    const [user, setUser] = useUser()
     const history = useHistory()
 
     const handleLogOut = () => {

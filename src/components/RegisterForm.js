@@ -3,7 +3,7 @@ import axios from 'axios'
 import { Error, PersonOutline, Lock, LockOutlined } from '@material-ui/icons'
 import { CircularProgress } from '@material-ui/core'
 import { useHistory } from 'react-router-dom'
-import { useStateValue } from '../StateContext'
+import { useUser } from '../UserContext'
 
 const RegisterForm = () => {
     const [username, setUsername] = useState('')
@@ -11,7 +11,7 @@ const RegisterForm = () => {
     const [confirmPassword, setConfirmPassword] = useState('')
     const [error, setError] = useState('');
     const [loading, setLoading] = useState(false)
-    const [,setUser] = useStateValue()
+    const [,setUser] = useUser()
 
     const history = useHistory()
 
@@ -37,9 +37,13 @@ const RegisterForm = () => {
             setUser(username)
             history.push('/user')
         })
-        .catch(err => {
+        .catch(({response}) => {
             setLoading(false);
-            setError(err.response.data)
+            if(!response) {
+                setError('newtwork too slow or unavailable')
+            } else {
+                setError(response.data)
+            }
         })
     }
     
