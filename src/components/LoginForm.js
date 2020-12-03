@@ -40,7 +40,7 @@ const LoginForm = () => {
                 password
             },
             withCredentials: true,
-            url: 'https://mylogin-system.herokuapp.com/login'
+            url: 'http://mylogin-system.herokuapp.com/login'
         })
         .then(() => {
             setLoading(false);

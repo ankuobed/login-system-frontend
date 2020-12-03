@@ -26,7 +26,7 @@ const RegisterForm = () => {
               confirmPassword
             },
             withCredentials: true,
-            url: 'https://mylogin-system.herokuapp.com/register'
+            url: 'http://mylogin-system.herokuapp.com/register'
         })
         .then(() => {
             setError('')
